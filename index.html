@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LiteNav Pro G-Edition</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mode-2d">
+
+    <div id="permission-modal" class="modal">
+        <div class="modal-content">
+            <span class="material-icons" style="font-size: 56px; color: #4285F4;">location_on</span>
+            <h3>Gunakan Lokasi?</h3>
+            <p>LiteNav memerlukan GPS untuk memberikan navigasi presisi dan rute tercepat.</p>
+            <button id="allow-btn">Setuju & Mulai</button>
+        </div>
+    </div>
+
+    <div id="top-panel">
+        <div class="search-wrap">
+            <div class="s-box">
+                <span class="material-icons" style="color: #4285F4;">my_location</span>
+                <input type="text" id="start-input" placeholder="Lokasi asal..." autocomplete="off">
+                <ul id="start-results" class="autocomplete-list"></ul>
+            </div>
+            <div class="s-box">
+                <span class="material-icons" style="color: #EA4335;">directions</span>
+                <input type="text" id="end-input" placeholder="Tujuan..." autocomplete="off">
+                <ul id="end-results" class="autocomplete-list"></ul>
+            </div>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="tab active" data-mode="car"><span class="material-icons">directions_car</span>Drive</button>
+            <button class="tab" data-mode="motorcycle"><span class="material-icons">two_wheeler</span>2-Wheel</button>
+            <button class="tab" data-mode="walk"><span class="material-icons">directions_walk</span>Walk</button>
+            <button class="tab" data-mode="exercise"><span class="material-icons">directions_run</span>Run</button>
+        </div>
+    </div>
+
+    <div id="recent-panel">
+        <div class="h-title"><span class="material-icons">history</span> Terakhir Dikunjungi</div>
+        <ul id="recent-list"></ul>
+    </div>
+
+    <div id="view-controls">
+        <button id="v2d" class="v-btn active">2D</button>
+        <button id="v25d" class="v-btn">2.5D</button>
+        <button id="v3d" class="v-btn">3D</button>
+    </div>
+
+    <div id="map"></div>
+
+    <div id="bottom-dash">
+        <div class="info-row">
+            <div class="stats">
+                <span id="eta-txt">-- mnt</span>
+                <span id="dist-txt">0.0 km</span>
+            </div>
+            <div class="speedo">
+                <span id="speed-num">0</span><small>km/h</small>
+            </div>
+        </div>
+        <div class="action-row">
+            <button id="start-trip" class="btn primary"><span class="material-icons">navigation</span> MULAI</button>
+            <button id="pause-trip" class="btn warning" style="display:none;"><span class="material-icons">pause</span> JEDA</button>
+            <button id="finish-trip" class="btn danger" style="display:none;"><span class="material-icons">stop</span> FINISH</button>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

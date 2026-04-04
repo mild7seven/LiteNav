@@ -1,0 +1,21 @@
+{
+  "name": "litenav-g-edition-bundle",
+  "version": "2026.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
+    "leaflet-rotatedmarker": "^0.2.0",
+    "osmbuildings": "^4.1.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0",
+    "vite-plugin-pwa": "^0.20.0"
+  }
+}
